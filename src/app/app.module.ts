@@ -11,13 +11,21 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { WelcomeComponent } from './main/welcome/welcome.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ActiveHeaderComponent } from './shared/active-header/active-header.component';
+import { SocialService } from './service/social.service';
+import { NgbdModalBasic } from './main/components/modal/modal.component';
+
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
         WelcomeComponent,
-        FooterComponent
+        FooterComponent,
+        ActiveHeaderComponent,
+        NgbdModalBasic
     ],
     imports: [
         BrowserAnimationsModule,
@@ -26,9 +34,13 @@ import { FooterComponent } from './shared/footer/footer.component';
         RouterModule,
         AppRoutingModule,
         ComponentsModule,
-        ExamplesModule
+        ExamplesModule,
+        HttpModule,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [
+        SocialService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

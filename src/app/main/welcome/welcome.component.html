@@ -1,20 +1,23 @@
 <div id="welcome" class="wrapper">
-    <div class="page-header page-header-small">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/images/welcom-header.jpg');">
+    
+    <!-- <app-navbar ></app-navbar> -->
+    <div class="page-header page-header-small" style="background: rgba(0,0,0,0.3);">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style=" background-image: url('assets/img/images/welcom-header.jpg');">
         </div>
         <div class="container d-flex justify-content-start">
             <div class="titel-text">
                 <div class="title-header">Adressing Mental Health<br> With Virtual Reality!</div>
                 <div class="title-content">Neurotops is a complete safe anonymous way that helps<br>
                     you work on your mental challenges.</div>
-                <button class="btn btn-round btn-register" type="button">PRE REGISTER</button>
+                <!-- <button class="btn btn-round " type="button">PRE REGISTER</button> -->
+                <ngbd-modal-component [btnFlag]="true"></ngbd-modal-component>
             </div>
         </div>
     </div>
-
+    
     <div class="section section-about-us">
         <div class="container read-section">
-            <div class="text-right about">
+            <div class="about">
                 <div class="about-title font-roboto-thin">Neurotops is'nt just a new way of tackling daily challanges</div>
                 <div class="about-slog">It's better in every way!</div>
             </div>
@@ -22,7 +25,7 @@
             <div class="section-story-overview">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-6 col-lg-3 text-center" >
-                        <img class="read-img" src='assets/img/images/about1.jpg'>           
+                        <img class="read-img" src='assets/img/images/about1.svg'>           
                         <div class="read-title">
                             Complete<br>
                             Virtual Reality kit
@@ -33,7 +36,7 @@
                         <button class="btn btn-read" type="button">Read More</button>               
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-6 col-lg-3 text-center">
-                        <img class="read-img" src='assets/img/images/about2.jpg' >            
+                        <img class="read-img" src='assets/img/images/about2.svg' >            
                         <div class="read-title">
                             Acess to<br>
                             A.I Training Classes
@@ -54,40 +57,52 @@
                         <button class="btn btn-read" type="button">Read More</button>                    
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-6 col-lg-3 text-center">
-                        <img class="read-img" src='assets/img/images/about4.jpg'>           
+                        <img class="read-img" src='assets/img/images/about4.svg'>           
                         <div class="read-title">
                             Completely Anonymous
                         </div>
                         <div class="read-content">
-                            Choose to interact with complete anonimity without fear of stigma!
+                            Choose to interact with complete anonimity
                         </div>
                         <button class="btn btn-read" type="button">Read More</button>
                     </div>
                 </div>
             </div>
-            <div>
+            <!-- <div>
                 <img src='assets/img/images/Image2.jpg'>    
-            </div>
+            </div> -->
         </div>
     </div>
 
     <div class="section section-team text-center">
         <div class="container">
-            <div class="do-title font-roboto-thin">A.I Classes</div>
-            <div class="do-content">Here's some of<span style="color: rgb(72, 47 ,247);"> what we do!</span></div>
-            <div class="team">
+            <div class="do-title font-roboto-thin">Here's some of what we do!</div>
+            <div class="do-content">A.I Classes</div>
+            <div class="do-image-group">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 content-right">
-                        <img class="do-img do-img-right" src='assets/img/images/do4.jpg'>           
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="do-img-hover">
+                            <img class="do-img do-img-right" src='assets/img/images/do4.jpg'>
+                            <span class="do-img-title right" style="right:115px;">Agoraphobia</span>           
+                        </div>
                     </div>
                     <div class="col-12 col-sm-12  col-md-6">
-                        <img class="do-img do-img-left" src='assets/img/images/do1.jpg'>           
+                        <div class="do-img-hover">
+                            <img class="do-img do-img-left" src='assets/img/images/do1.jpg'>           
+                            <span class="do-img-title left" style="left:49px;">Fear of Public Speaking</span>           
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 content-right">
-                        <img class="do-img do-img-right" src='assets/img/images/do2.jpg'>           
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="do-img-hover">
+                            <img class="do-img do-img-right" src='assets/img/images/do2.jpg'>           
+                            <span class="do-img-title right" style="right:147px;">PTSD</span>           
+                        </div>         
                     </div>
                     <div class="col-12 col-sm-12  col-md-6">
-                        <img class="do-img do-img-left" src='assets/img/images/do3.jpg'>           
+                        <div class="do-img-hover">
+                            <img class="do-img do-img-left" src='assets/img/images/do3.jpg'>           
+                            <span class="do-img-title left" style="left:100px;">Fear of heights</span>           
+                        </div>        
                     </div>
                 </div>
             </div>
@@ -99,21 +114,22 @@
             <div class="font-roboto-thin social-title">Live traction on social media</div>
             <div class="d-flex justify-content-center">
                     <div>
-                        <img class="social-img" src='assets/img/images/facebook.png'>
-                        <div>12345</div>
+                        <img class="social-img" src='assets/img/images/facebook.png'> 
+                        <!-- onclick=" window.open('https://www.facebook.com/Neurotops/');" -->
+                        <div class="count-text">{{facebookFollowCount}}</div>
                     </div>
                     <div>
                         <img class="social-img" src='assets/img/images/instagram.png'>
-                        <div>12345</div>
+                        <!-- onclick=" window.open('https://www.instagram.com/neurotops/');" -->
+                        <div class="count-text">{{instagramFollowCount}}</div>
                     </div>
-                    <div>
+                    <!-- <div>
                         <img class="social-img" src='assets/img/images/linkedin.png'>
-                        <div>12345</div>
                     </div>
                     <div>
                         <img class="social-img" src='assets/img/images/twitter.png'>
-                        <div>12345</div>
-                    </div>
+                        <div class="count-text">{{twitterFollowCount}}</div>
+                    </div> -->
             </div>
         </div>
     </div>
@@ -127,11 +143,11 @@
                         <div class="text-left" style="padding: 10px;">
                             <div class="review-header">
                                 <img class="review-img" src='assets/img/images/Avatar.png'>           
-                                <span class="review-title">Name Surname</span>
-                                <span class="review-time">1h ago</span>
+                                <span class="review-title">Jamie H.  – Reading</span>
+                                <!-- <span class="review-time">1h ago</span> -->
                             </div>
                             <div class="review-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                I have to admit I was a bit sceptical at first but at the same time quite curious and thrilled to be the second person in the pilot program. I felt quite astonished of how real the environment was, and I felt confident talking about my challenges knowing that it’s completely anonymous.
                             </div>
                         </div>
                     </div>
@@ -139,11 +155,12 @@
                         <div class="text-left"  style="padding: 10px;">
                             <div class="review-header">
                                 <img class="review-img" src='assets/img/images/Avatar.png'>           
-                                <span class="review-title">Name Surname</span>
-                                <span class="review-time">1h ago</span>
+                                <span class="review-title">Ave K. - Trainee Psychotherapist - London</span>
+                                <!-- <span class="review-time">1h ago</span> -->
                             </div>
                             <div class="review-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                Neurotops could be the next big thing in online therapy. It’s a innovative, immersive, user friendly platform that can create possibilities beyond current reach. It merges the benefits of the tried and tested ‘talking therapies’ with enhanced therapeutic environment.
+                                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam. -->
                             </div>
                         </div>
                     </div>
@@ -156,36 +173,39 @@
         <div class="container">
             <div class="problem-commit">Current Problem</div>
             <div class="font-roboto-thin problem-title">Mental healthcare treatment is expensive</div>
-            <div class="problem-content"><span style="color: rgb(72, 47 ,247);">Neurotops</span> provides the solution</div>
+            
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-7">
                         <img class="problem-img" src='assets/img/images/problem1.jpg'>           
                     </div>
-                    <div class="col-12 col-sm-12 col-md-5 problem-detail">
-                       <div class="problem-item-detail">
-                            <span class="problem-item">Studies show</span> that there is a strong socioeconomic gradient in mental health, with people of lower socioeconomic status having a higher likelihood of developing and experiencing <span class="problem-item1">mental health problems.</span>
-                       </div>
-                       <div class="problem-item-detail">
-                            <span class="problem-item">A session</span> can run up to <span class="problem-item1">£250</span> and you are often forced to choose between falling in <span class="problem-item1">debt or falling apart.</span>
-                       </div>
-                       <div class="problem-item-detail">
-                            <span class="problem-item">Over £193 billion</span> in lost wages with a lifespan decrease by <span class="problem-item1">25 years</span>  on average.
-                       </div>
-                       <div class="problem-item-detail">
+                    <ul class="col-12 col-sm-12 col-md-5 problem-detail">
+                        <li class="problem-item-detail">
+                            <span class="problem-item">Studies show</span> that there is a strong socioeconomic gradient in mental health, with people of lower socioeconomic status having a higher likelihood of developing and experiencing mental health problems.
+                        </li>
+                        <li class="problem-item-detail">
+                            <span class="problem-item">A session</span> can run up to £250 and you are often forced to choose between falling in debt or falling apart. 
+                        </li>
+                        <li class="problem-item-detail">
+                            <span class="problem-item">Over £193 billion</span> in lost wages with a lifespan decrease by 25 years on average
+                        </li>
+                        <li class="problem-item-detail">
                             <span class="problem-item">260 million people</span> suffer from a form of anxiety without the financial means to get any help.
-                       </div>
-                       <div class="d-flex justify-content-center">
-                            <button class="btn btn-round btn-register" type="button">PRE REGISTER</button>
+                        </li>
+            
+                        <div class="d-flex justify-content-center">
+                            <!-- <button class="btn btn-round btn-register" type="button">PRE REGISTER</button> -->
+                            <ngbd-modal-component [btnFlag]="true"></ngbd-modal-component>
                         </div>
-                    </div>
+                    </ul>
                 </div>
         </div>
     </div>
 
     <div class="section section-team text-center">
         <div class="container">
-            <div class="current-content">Current Problem</div>
-            <div class="current-title font-roboto-thin">Normally Visiting a therapist can be quite an anxious time</div>
+            <div class="problem-commit">Current Problem</div>
+            <div class="current-title font-roboto-thin">Visiting a therapist can be quite an anxious time</div>
+            <div class="text-center work-step1-item"><span class="problem-item">recent clinical trials</span> have shown that patients randomly assigned to receive home-therapy are significantly more likely to complete a full course of treatment and experience improved clinical outcomes</div>
             
             <div class="row">
                 <hr class="step-middle-line">
@@ -216,32 +236,64 @@
             </div>
         </div>
     </div>
+    <div class="section section-team text-left">
+        <div class="container">
+            <div class="problem-commit">Current Problem</div>
+            <div class="problem-title font-roboto-thin">No anonymity and few home-treatment options:</div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-7">
+                    <img class="problem-img" style="border-radius: 75px;" src='assets/img/images/problem3.png'>           
+                </div>
+                <ul class="col-12 col-sm-12 col-md-5 problem-detail">
+                    <li class="problem-item-detail ">
+                        <span class="problem-item">STIGMA</span> plays an important role even after an individual realized that he/she might need to work on current challenges. Ssometimes there's comfort in anonymity.  
+                    </li>
+                    <li class="problem-item-detail">
+                        <span class="problem-item">ALTHOUGH</span> we live in an era where people readily broadcast their innermost thoughts, not everyone finds it easy to speak up
+                    </li>
+                    <li class="problem-item-detail">
+                        <span class="problem-item">GOING OUTSIDE</span> of one’s comfort zone not only incurs additional costs, but also adds another barrier of entry in solving daily challenges.
+                    </li>
+                    <div class="d-flex justify-content-center">
+                        <!-- <button class="btn btn-round btn-register" type="button">PRE REGISTER</button> -->
+                        <ngbd-modal-component [btnFlag]="true"></ngbd-modal-component>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <div class="section section-contact-us text-left">
-        <div class="container">
+        <div class="container problem-align">
             <div class="problem-commit">We got a solution</div>
-            <div class="font-roboto-thin problem-title">Access to hundreds of professionals</div>
-            <div class="solution-content">from the comfort of your home in complete anonnimaty</div>
-            
+            <!-- <div class="problem-content"><span style="color: rgb(72, 47 ,247);">Neurotops</span> provides the solution</div> -->
+            <!-- <div class="font-roboto-thin problem-title">Access to hundreds of professionals</div>       -->
+                <div class="font-roboto-thin problem-title"><span style="color: rgb(72, 47 ,247);">Neurotops</span> provides the solution</div>
+            <div class="solution-content">We have designed the first virtual reality platform that tackles mental health challenges </div>
+      
             <div class="row" style="position: relative;">
                 
-                <div class="col-12 col-sm-12 col-md-5 solution-detail">
-                    <div class="problem-item-detail">
-                        <span class="problem-item">We have a large panel of therapists you can choose from, all from the confort of your home!</span>
-                    </div>
-                    <div class="problem-item-detail" style="margin-top: 70px;">
-                        <span class="problem-item">Safe</span>
-                    </div>
-                    <div class="problem-item-detail">
-                        <span class="problem-item">The first session is free</span>
-                    </div>
-                    <div class="problem-item-detail" style="margin-top: 50px;">
-                        <span class="problem-item">260 million people</span> suffer from a form of anxiety without the financial means to get any help.
-                    </div>
+                <ul class="col-12 col-sm-12 col-md-5 problem-detail">
+                    <li class="problem-item-detail">
+                        More ways to work on your phobias with A.I training, but remarkably affordable. 
+                    </li>
+                    <li class="problem-item-detail">
+                        Specialised treatment with 1-1 sessions for patients suffering from PTSD, childhood trauma, etc.
+                    </li>
+                    <li class="problem-item-detail">
+                        A well-defined mobile solution, fully accessible from anywhere in the world 
+                    </li>
+                    <li class="problem-item-detail">
+                        Complete anonymity
+                    </li>
+                    <li class="problem-item-detail">
+                        Lowest costs on the market and the most in-depth experience currently offered.
+                    </li>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-round btn-register" type="button">PRE REGISTER</button>
+                        <!-- <button class="btn btn-round btn-register" type="button">PRE REGISTER</button> -->
+                        <ngbd-modal-component [btnFlag]="true"></ngbd-modal-component>
                     </div>
-                </div>
+                </ul>
                 <div class="col-12 col-sm-12 col-md-7">
                     <img class="solution-img" src='assets/img/images/solution.jpg'>           
                 </div>
@@ -256,17 +308,18 @@
         <img class="blue-point" src='assets/img/images/bluepoint.png'>           
     </div>
 
-    <div class="section section-contact-us">
+    <div  id="step1" class="section section-contact-us">
         <div class="container">
             <div class="row" style="position: relative;">
                 <div class="col-12 col-sm-12 col-md-7 work-step1-detail text-center">
                     <div class="work-step1 text-left">step1</div> 
                     <div class="font-roboto-thin work-step1-title">Free Virtual Reality Headset</div>
-                        <div class="work-step1-item">When subscribing to our servisse, you will recieve your <span class="work-step1-item-blue">start up kit</span> in the mail.</div>
-                        <div class="work-step1-item">This Virtual Reality Headset , a pir of headphones, instruction and a Q.R Code.</div>
+                        <div class="work-step1-item">After subscribing to our platform, you will receive a free <span class="work-step1-item-blue">startup kit</span> in the mail.</div>
+                        <div class="work-step1-item">The pack includes a VR Headset, a set pair of headphones and instructions on what are the next steps.</div>
                         <div class="work-step1-item1">Connect instantly to a professional anywhere in the world</div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-round btn-work-step1" type="button">PRE REGISTER</button>
+                        <!-- <button class="btn btn-round btn-work-step1" type="button">PRE REGISTER</button> -->
+                        <ngbd-modal-component [btnFlag]="false"></ngbd-modal-component>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-5">
@@ -277,7 +330,7 @@
         </div>
     </div>
 
-    <div class="section section-contact-us">
+    <div  id="step2" class="section section-contact-us">
         <div class="container">
             <div class="row" style="position: relative;">
                 <div class="col-12 col-sm-12 col-md-5">
@@ -291,29 +344,29 @@
                     </div>
                     <img class="red-point" src='assets/img/images/path.png'>    
                     
-                    <div class="work-step1-item">By using the provided QR Code, create na account choose between AI based classes<br>that help you conquer challenges such as 
-                        <br><span class="work-step1-item-blue">fear of public speaking, heights, flying and many more!</span></div>
-                    <div class="work-step1-item">Or choose our premium servisse and connect with therapists for 1-1 Sessions</div>
-                    <div class="work-step1-item1">What are you waiting for? Register!</div>
+                    <div class="work-step1-item">Use the QR Code attached and download the app.<br>You can then create an account and link your preferred payment method. Please note that the security of our users has its upmost importance to us.<div>
+                    <div class="work-step1-item">This is why all of our data is stored using a private blockchain.</div>
+                    <!-- <div class="work-step1-item1">What are you waiting for? Register!</div> -->
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-round btn-work-step1" type="button">PRE REGISTER</button>
+                        <!-- <button class="btn btn-round btn-work-step1"  type="button">PRE REGISTER</button> -->
+                        <ngbd-modal-component [btnFlag]="false"></ngbd-modal-component>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section section-contact-us">
+    <div id="step3" class="section section-contact-us">
         <div class="container">
             <div class="row" style="position: relative;">
                 <div class="col-12 col-sm-12 col-md-7 work-step1-detail text-center">
                     <div class="work-step1 text-left">step3</div> 
                     <div class="font-roboto-thin work-step1-title">Choose an Avatar!</div>
-                        <div class="work-step1-item">Choose an avatar, and have your session in a completely safe 
-                            and anonymous away that empowers you <span class="work-step1-item-blue">empowers you</span> to live a better tomorow.</div>
-                        <div class="work-step1-item">Our sessions will not be recorded and you can choose between having a regular professional working with you or a new one each time</div>
+                        <div class="work-step1-item">You then be able to choose and customise your avatar based on your preferences.</div>
+                        <div class="work-step1-item">Your preferences will be stored for the next time you login to the app.</div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-round btn-work-step1" style="margin-top:40px;" type="button">PRE REGISTER</button>
+                        <!-- <button class="btn btn-round btn-work-step1" style="margin-top:40px;" type="button">PRE REGISTER</button> -->
+                        <ngbd-modal-component [btnFlag]="false" style="margin-top:40px;"></ngbd-modal-component>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-5">
@@ -324,29 +377,31 @@
         </div>
     </div>
 
-    <div class="section section-contact-us">
+    <div id="step4" class="section section-contact-us">
         <div class="container">
             <div class="row" style="position: relative;">
                 <div class="col-12 col-sm-12 col-md-7">
                     <img class="work-step1-img" src='assets/img/images/Group248.png'>           
                     <!-- <div class="work-step1-item text-center">A plug and play VR headset that connects with your phone</div> -->
                 </div>
-                <div class="col-12 col-sm-12 col-md-5 work-step1-detail text-center">
-                    <div class="text-right">
+                <div class="col-12 col-sm-12 col-md-5 work-step1-detail problem-align-right">
+                    <div class="problem-align-right">
                         <div class="work-step1 text-right">step4</div> 
-                        <div class="font-roboto-thin work-step4-title">Have your session</div>
-                        <div class="font-roboto-thin work-step4-content">It's that easy :)</div>
+                        <div class="font-roboto-thin work-step4-title text-center">Have your session</div>
+                        <div class="font-roboto-thin work-step4-content text-center">It's that easy :)</div>
                     </div>
-                    <div class="work-step4-item text-right">
+                    <div class="work-step1-item text-left">
                         <div style="margin-bottom: 20px;">
-                            Choose between AI based classes or<br> one to one Sessions
+                            You can now choose between:
                         </div>
-                        <div style="margin-bottom: 40px;">safe</div>
-                        <div style="margin-bottom: 40px;">The first session is free</div>
-                        <div style="margin-bottom: 20px;">cats dominate the wrold<br>yes wrold</div>
-                    <div>
+                        <ul>
+                            <li class="work-step1-item ml-3">A.I based classes such as: fear of heights, arachnophobia, fear of flying or even mindfulness sessions.</li>
+                            <li class="work-step1-item ml-3">1-1 sessions for interactions with fully accredited live therapists that will help you overcome challenges such as: PTSD, childhood trauma, gambling addictions, relationship counselling and more.</li>
+                        </ul>
+                    </div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-round btn-register" type="button">PRE REGISTER</button>
+                        <!-- <button class="btn btn-round btn-register" type="button">PRE REGISTER</button> -->
+                        <ngbd-modal-component></ngbd-modal-component>
                     </div>
                 </div>
             </div>
@@ -357,7 +412,7 @@
         <div class="container">
             <div class="challenges-title">Face your challenges</div>
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-4">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="challenges-item text-center">
                         <div class="challenges-item-conent">With Neurotops subscription servisse onee can acess a selection of <br> <span class="challenges-item-blue">A.I classes.</span></div>
                         <div class="challenges-price">$9.99</div>
@@ -367,7 +422,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="challenges-item text-center">
                         <div class="challenges-item-conent">In addition we offer <span class="challenges-item-blue">1-1 sessions</span> with qualified therapists </div>
                         <div class="challenges-price">$49.99</div>
@@ -377,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
                     <img class="challenges-img" src='assets/img/images/image5.png'> 
                 </div>
             </div>
@@ -395,4 +450,5 @@
             </div>
         </div>
     </div>
+    <!-- <app-footer></app-footer> -->
 </div>

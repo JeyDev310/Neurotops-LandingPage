@@ -1,3 +1,5 @@
-<app-navbar></app-navbar>
+
+<app-navbar *ngIf="showFlag"></app-navbar>
+<app-active-header *ngIf="activeShowFlag"></app-active-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

@@ -1,0 +1,26 @@
+#modal{
+    .btn-register{
+        font-size: 17px;
+        background-color: rgb(72, 47 ,247);
+        font-family: 'Roboto';
+        opacity: 1;
+    }
+    .btn-register-linear{
+        font-size: 17px;
+        background: linear-gradient(to bottom, #3975BD , #2AB0C0);
+        font-family: 'Roboto';
+        opacity: 1;
+    }
+  
+}
+.btn-right{
+    background: #1de3c3;
+    padding: 10px 25px !important;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.btn-cancel{
+    background: #3d6cb9; 
+    color: #FFFFFF; 
+    font-size: 14px;
+}

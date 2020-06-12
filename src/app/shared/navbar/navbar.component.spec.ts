@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Component, OnInit, HostListener } from "@angular/core";
 import { NavbarComponent } from './navbar.component';
 
 describe('NavbarComponent', () => {
@@ -18,7 +18,6 @@ describe('NavbarComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
